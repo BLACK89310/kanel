@@ -1,9 +1,7 @@
-
 @echo off
 echo BLACK FOX
 
-:: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\DRAG.dll" "tt.txt"
+:: Rename DLL in a safe test folder
+ren "C:\Windows\System32\HEAD.dll" "tt.txt"
 
-:: Auto-exit
 exit
