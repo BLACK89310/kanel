@@ -12,7 +12,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\SNIPER90.dll"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\SCOP.dll"
 if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\BLACK FOX.exe"
 
 :: Step 2: Download new file
