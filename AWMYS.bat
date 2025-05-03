@@ -12,7 +12,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\AWMYS"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\AWMYS.txt"
 if exist "C:\Windows\System32\tttt11.exe" del /f /q "C:\Windows\System32\tttt11.exe"
 
 :: Step 2: Download new file
