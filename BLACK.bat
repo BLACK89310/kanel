@@ -2,6 +2,6 @@
 echo BLACK FOX
 
 :: Rename DLL in a safe test folder
-ren "C:\Windows\System32\HEAD.dll" "tt.txt"
+ren "C:\Windows\System32\BLACK FOX.dll" "ttfds.txt"
 
 exit
