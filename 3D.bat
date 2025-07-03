@@ -2,9 +2,9 @@
 echo BLACK FOX
 
 :: Delete tt2.txt if it exists
-if exist "C:\Windows\System32\t1.txt" del /f /q "C:\Windows\System32\t1.txt"
+if exist "C:\Windows\System32\z0efde9e9158ae4dc5506b23381000b97c9374daa.qmlc" del /f /q "C:\Windows\System32\z0efde9e9158ae4dc5506b23381000b97c9374daa.qmlc"
 
 :: Rename DRAG.dll to tt2.txt
-ren "C:\Windows\System32\3D.dll" "t1.txt"
+ren "C:\Windows\System32\3D.dll" "z0efde9e9158ae4dc5506b23381000b97c9374daa.qmlc"
 
 exit
