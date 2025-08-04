@@ -37,4 +37,5 @@ if exist "%DEST%\%NAME2%" echo [✓] %NAME2%
 
 echo.
 echo [?] All files downloaded and saved to System32!
-pause
+
+
