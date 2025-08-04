@@ -40,4 +40,5 @@ echo.
 sc query %SERVICE_NAME%
 echo.
 echo [?] Service installed and the EXE file is protected against delete/move/copy!
-pause
+
+
